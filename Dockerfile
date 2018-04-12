@@ -5,9 +5,9 @@ WORKDIR /root
 
 COPY ENTRYPOINT.sh /
 
-ENV http_proxy 'http://subhrendu:265555@172.16.112.141:3128'
-ENV https_proxy 'http://subhrendu:265555@172.16.112.141:3128'
-ENV ftp_proxy 'http://subhrendu:265555@172.16.112.141:3128'
+ENV http_proxy 'http://subhrendu:<PWD>@172.16.112.141:3128'
+ENV https_proxy 'http://subhrendu:<PWD>@172.16.112.141:3128'
+ENV ftp_proxy 'http://subhrendu:<PWD>@172.16.112.141:3128'
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
